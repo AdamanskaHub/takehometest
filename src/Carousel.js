@@ -16,12 +16,14 @@ const responsive = {
     items: 2,
   },
   tablet: {
-    breakpoint: {max: 762, min: 396},
+    breakpoint: {max: 762, min: 500},
     items: 2,
+    partialVisibilityGutter: 20,
   },
   mobile: {
-    breakpoint: {max: 396, min: 0},
-    items: 2,
+    breakpoint: {max: 500, min: 0},
+    items: 1,
+    partialVisibilityGutter: 40,
   },
 };
 
@@ -110,7 +112,6 @@ const Carouselator = props => {
       {props.data === 'vids'
         ? <Carousel
             ssr
-            partialVisbile
             itemClass="image-item"
             responsive={responsive}
             infinite={true}
@@ -123,6 +124,7 @@ const Carouselator = props => {
             {vids.map (vid => {
               return (
                 <CarouselItem
+                  key={vid.title}
                   title={vid.title}
                   tag={vid.tag}
                   completedTime={vid.completedTime}
@@ -132,7 +134,6 @@ const Carouselator = props => {
           </Carousel>
         : <Carousel
             ssr
-            partialVisbile
             itemClass="image-item"
             responsive={responsive}
             infinite={true}
@@ -145,6 +146,7 @@ const Carouselator = props => {
             {cards.map (card => {
               return (
                 <CarouselItemTwo
+                  key={card.title}
                   title={card.title}
                   tag={card.tag}
                   score={card.score}

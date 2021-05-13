@@ -34,8 +34,9 @@
 }
 
 .total{
+  font-display: optional;
   font-size: 14px;
-  color: rgba(0, 135, 205, 1);
+  color: rgb(3, 106, 158);
   cursor: pointer;
 }
 

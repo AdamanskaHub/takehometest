@@ -16,6 +16,7 @@
 .circle{
   margin-bottom: 32px;
   width: 60%;
+  height: auto;
 }
 
 .typebox{
@@ -28,6 +29,7 @@
 }
 
 .typeboxText{
+  font-display: optional;
   font-size: 12px;
   text-transform: uppercase;
   color: #57667E;
@@ -91,12 +93,13 @@ svg{
   align-items: flex-end;
 }
 .title{
+  font-display: optional;
   font-size: 16px;
   color: #000;
   margin: 0 0 12px 0;
   height: 50px;
   display: flex;
-  align-items: end;
+  align-items: flex-end;
 }
 .folgen{
   font-size: 16px;

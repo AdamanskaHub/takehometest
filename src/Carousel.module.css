@@ -1,0 +1,47 @@
+.maxer{
+  max-width: 1464px;
+  margin: 64px 30px 96px 30px;
+}
+
+@media only screen and (max-width: 762px) {
+  .maxer{
+    margin: 64px 16px 45px 0px;
+  }
+}
+
+@media only screen and (min-width: 1464px) {
+  .maxer{
+    margin: 64px 128px 96px 128px;
+  }
+}
+
+/* .btnGrp{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% + 60px);
+} */
+
+.topTitles{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 24px 24px 24px;
+  font-family: 'Poppins', sans-serif;
+}
+
+@media only screen and (max-width: 762px) {
+  .topTitles{
+  margin-bottom: 16px;
+}
+}
+
+.showTitle{
+  font-size: 16px;
+  color: rgba(31, 37, 46, 1);
+}
+
+.total{
+  font-size: 14px;
+  color: rgba(0, 135, 205, 1);
+  cursor: pointer;
+}

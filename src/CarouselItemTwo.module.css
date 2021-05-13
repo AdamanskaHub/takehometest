@@ -1,0 +1,122 @@
+
+/* === ITEM TWO === */
+
+.container{
+  width: auto;
+  margin: 0 21px 32px;
+  background-color: #fff;
+  box-shadow: 0px 4px 16px rgba(106, 119, 142, 0.25);
+  border-radius: 6px;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+}
+
+.top{
+  display: flex;
+  width: 100%;
+}
+
+.circle{
+  margin-bottom: 32px;
+  width: 60%;
+}
+
+.typebox{
+  position: absolute;
+  top: 16px;
+  left: 32px;
+  background-color: #fff;
+  padding: 7px;
+  border-radius: 4px;
+}
+
+.typeboxText{
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #57667E;
+}
+
+.stars{
+  position: absolute;
+  top: 16px;
+  right: 32px;
+}
+
+.starsText{
+  font-size: 14px;
+  color: #1F252E;
+  margin-right: 6px;
+}
+
+svg{
+  height: 14px;
+  color: #0054F7;
+}
+
+.play{
+  position: absolute;
+  bottom: 40%;
+  right: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #F0F2F5;
+}
+
+@media only screen and (max-width: 762px) {
+  .play{
+    height: 60px;
+    width: 60px;
+  }
+}
+
+.play>.playTriangle{
+  color: #57667E;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 762px) {
+  .play>.playTriangle{
+    font-size: 1rem;
+  }
+}
+
+.bottom{
+  padding: 0 16px 16px 16px ;
+  text-align: left;
+}
+.lastLine{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.title{
+  font-size: 16px;
+  color: #000;
+  margin: 0 0 12px 0;
+  height: 50px;
+  display: flex;
+  align-items: end;
+}
+.folgen{
+  font-size: 16px;
+  color: #57667E;
+  text-transform: uppercase;
+}
+
+.plusBG{
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: #F0F2F5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.plus{
+  width: 11px;
+  color: #57667E;
+}

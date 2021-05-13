@@ -3,6 +3,8 @@ import 'react-multi-carousel/lib/styles.css';
 import CarouselItem from './CarouselItem';
 import CarouselItemTwo from './CarouselItemTwo';
 import styles from './Carousel.module.css';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faChevronLeft, faChevronRight} from '@fortawesome/free-solid-svg-icons';
 
 const responsive = {
   superLargeDesktop: {
@@ -23,21 +25,19 @@ const responsive = {
   },
 };
 
-// const CustomLeftArrow = ({onClick}) => (
-//   <i onClick={() => onClick ()} className="custom-left-arrow" />
-// );
-// const CustomRightArrow = ({onClick}) => {
-//   return <i className="custom-right-arrow" onClick={() => onClick ()} />;
-// };
+const BtnGrp = ({next, previous}) => {
+  return (
+    <div className={styles.btnGrp}>
+      <div className={styles.btnArrow} onClick={previous}>
+        <FontAwesomeIcon className={styles.chevron} icon={faChevronLeft} />
+      </div>
+      <div className={styles.btnArrow} onClick={next}>
+        <FontAwesomeIcon className={styles.chevron} icon={faChevronRight} />
 
-// const CustomButtonGroupAsArrows = ({next, previous}) => {
-//   return (
-//     <div className={styles.btnGrp}>
-//       <button className={styles.btnLeft} onClick={previous}>Prev</button>
-//       <button className={styles.btnRight} onClick={next}>Next</button>
-//     </div>
-//   );
-// };
+      </div>
+    </div>
+  );
+};
 
 const vids = [
   {
@@ -111,25 +111,14 @@ const Carouselator = props => {
         ? <Carousel
             ssr
             partialVisbile
-            // deviceType={deviceType}
             itemClass="image-item"
             responsive={responsive}
             infinite={true}
             swipeable={true}
             removeArrowOnDeviceType={['mobile', 'tablet']}
-            // arrows={false}
-            //customButtonGroup={<CustomButtonGroupAsArrows />}
+            arrows={false}
+            customButtonGroup={<BtnGrp />}
           >
-
-            {/* {props.cards.map (card => {
-        return (
-          <img
-            draggable={false}
-            style={{width: '100%', height: '100%'}}
-            src={card}
-          />
-        );
-      })} */}
 
             {vids.map (vid => {
               return (
@@ -140,20 +129,17 @@ const Carouselator = props => {
                 />
               );
             })}
-
-            {/* <CustomButtonGroupAsArrows>
-          <CustomLeftArrow />
-        </CustomButtonGroupAsArrows> */}
           </Carousel>
         : <Carousel
             ssr
             partialVisbile
-            // deviceType={deviceType}
             itemClass="image-item"
             responsive={responsive}
             infinite={true}
             swipeable={true}
             removeArrowOnDeviceType={['mobile', 'tablet']}
+            arrows={false}
+            customButtonGroup={<BtnGrp />}
           >
 
             {cards.map (card => {
